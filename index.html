@@ -8,19 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Patrick+Hand&family=Schoolbell&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260830b" />
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <div class="logo-wrap">
-        <div class="flask">⚗</div>
-        <div class="logo-copy"><span>THE</span><strong>LEADERSHIP</strong><b>LAB</b></div>
-      </div>
+      <div class="logo-wrap"><div class="flask">⚗</div><div class="logo-copy"><span>THE</span><strong>LEADERSHIP</strong><b>LAB</b></div></div>
       <p class="tagline">PRACTICE THE HUMAN SIDE OF LEADERSHIP</p>
       <div class="sticky-rule">People aren't experiments.<br><strong>Leadership is the practice.</strong></div>
       <p class="side-label">CHOOSE YOUR ROOM</p>
-      <nav class="room-nav" aria-label="Leadership practice rooms">
+      <nav class="room-nav">
         <button class="nav-room active" data-room="arena"><span>🥊</span><div><strong>The Arena</strong><small>Real situations. Real choices.</small></div></button>
         <button class="nav-room" data-room="armor"><span>🛡️</span><div><strong>Armor Check</strong><small>Spot what blocks you.</small></div></button>
         <button class="nav-room" data-room="rumble"><span>⚡</span><div><strong>The Rumble Room</strong><small>Hard conversations.</small></div></button>
@@ -28,7 +25,7 @@
         <button class="nav-room" data-room="values"><span>⭐</span><div><strong>Values Lab</strong><small>What matters when it's messy.</small></div></button>
         <button class="nav-room" data-room="repair"><span>🧰</span><div><strong>Repair Shop</strong><small>Mess up. Own it. Make it right.</small></div></button>
       </nav>
-      <div class="safe-note">This is a safe place<br>to try, reflect,<br>and try again. ♡</div>
+      <div class="safe-note">Try it. Notice it.<br>Try again. ♡</div>
     </aside>
 
     <main class="workspace">
@@ -37,7 +34,7 @@
         <button class="notebook" type="button" id="notebookBtn">📓 MY NOTEBOOK <span id="notebookCount">0</span></button>
       </header>
 
-      <section class="scenario-strip" aria-label="Choose a scenario">
+      <section class="scenario-strip">
         <button class="scenario-pill active" data-scenario="late">⏰ Late again</button>
         <button class="scenario-pill" data-scenario="feedback">💬 Feeling unheard</button>
         <button class="scenario-pill" data-scenario="mistake">🫠 You messed up</button>
@@ -53,29 +50,20 @@
             <strong class="say-label">What do you say?</strong>
           </div>
 
-          <div class="character-stage" id="sceneStage" data-mood="guarded">
-            <div class="scene-wall wall-one"></div>
-            <div class="scene-wall wall-two"></div>
-            <div class="wall-note note-one">LISTEN</div>
-            <div class="wall-note note-two">BE CURIOUS</div>
-            <div class="plant"><span></span><span></span><span></span></div>
-            <div class="table-scene">
-              <div class="chair chair-left"><i></i></div>
-              <div class="chair chair-right"><i></i></div>
-              <div class="table-top"></div>
-              <div class="mug mug-left">☕</div>
-              <div class="mug mug-right">☕</div>
-              <div class="notebook-prop">▤</div>
-            </div>
-            <div class="speech-bubble" id="characterBubble">I know what you're thinking.<br>Just hear me out, okay?</div>
-            <div class="body-language-tag">BODY LANGUAGE: <strong id="bodyLanguageText">guarded</strong></div>
-            <div class="scene-caption" id="sceneCaption">Across the table, the room feels a little tight.</div>
+          <div class="moment-board" id="sceneStage" data-mood="guarded">
+            <div class="moment-kicker">IN THE ROOM</div>
+            <div class="quote-card" id="characterBubble">“I know what you're thinking. Just hear me out, okay?”</div>
+            <div class="clue clue-a"><span>WHAT YOU KNOW</span><strong id="knownFact">25 minutes late.</strong></div>
+            <div class="clue clue-b"><span>WHAT YOU DON'T</span><strong id="unknownFact">Why.</strong></div>
+            <div class="scene-symbols" aria-hidden="true"><span>☕</span><span>↯</span><span>🕒</span></div>
+            <div class="body-language-tag">ROOM FEEL: <strong id="bodyLanguageText">guarded</strong></div>
+            <div class="scene-caption" id="sceneCaption">There is tension, but not much information yet.</div>
           </div>
 
-          <form class="reply-zone" id="replyForm">
-            <textarea id="replyInput" rows="2" placeholder="Type what you would say to Taylor..."></textarea>
-            <button class="say-btn" type="submit">SAY IT ✈</button>
-          </form>
+          <div class="reply-zone">
+            <textarea id="replyInput" rows="3" placeholder="Type what you would actually say to Taylor..."></textarea>
+            <button class="say-btn" id="sayBtn" type="button">SAY IT ✈</button>
+          </div>
 
           <div class="nudges">
             <span>Need a nudge? 💡</span>
@@ -89,11 +77,11 @@
 
         <aside class="impact-panel">
           <div class="coach-note"><span>LAB COACH ↝</span><p id="coachText">Stay connected <strong>and</strong> address the issue.</p></div>
-          <h2>YOUR IMPACT ✨</h2>
+          <h2>WHAT SHIFTED ✨</h2>
           <div class="impact-row"><span>💜 Connection</span><div class="track"><i id="connectionMeter"></i></div><b id="connectionScore">72</b></div>
           <div class="impact-row"><span>🎯 Clarity</span><div class="track"><i id="clarityMeter"></i></div><b id="clarityScore">65</b></div>
           <div class="impact-row"><span>⚡ Courage</span><div class="track"><i id="courageMeter"></i></div><b id="courageScore">48</b></div>
-          <div class="win-card"><span>TODAY'S WIN ⭐</span><p id="winText">You showed up. That's a win.</p></div>
+          <div class="win-card"><span>NOTICE THIS ⭐</span><p id="winText">You showed up. That's a rep.</p></div>
           <button class="save-insight" id="saveInsight" type="button">☆ SAVE THIS REP</button>
         </aside>
       </section>
@@ -112,8 +100,9 @@
       <footer class="footer-banner">Leadership isn't about being the smartest person in the room. It's about being the <strong>most human.</strong> ♡</footer>
     </main>
   </div>
+
   <dialog id="roomDialog" class="room-dialog"><button class="close-dialog" id="closeDialog" type="button">×</button><div id="roomDialogContent"></div></dialog>
   <dialog id="notebookDialog" class="room-dialog"><button class="close-dialog" id="closeNotebook" type="button">×</button><h2>My Notebook 📓</h2><div id="notebookEntries"></div></dialog>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260830b" defer></script>
 </body>
 </html>
