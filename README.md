@@ -1,1 +1,1 @@
-# LeadershipLab.
+# LeadershipLab
