@@ -19,7 +19,6 @@
       </div>
       <p class="tagline">PRACTICE THE HUMAN SIDE OF LEADERSHIP</p>
       <div class="sticky-rule">People aren't experiments.<br><strong>Leadership is the practice.</strong></div>
-
       <p class="side-label">CHOOSE YOUR ROOM</p>
       <nav class="room-nav" aria-label="Leadership practice rooms">
         <button class="nav-room active" data-room="arena"><span>🥊</span><div><strong>The Arena</strong><small>Real situations. Real choices.</small></div></button>
@@ -29,7 +28,6 @@
         <button class="nav-room" data-room="values"><span>⭐</span><div><strong>Values Lab</strong><small>What matters when it's messy.</small></div></button>
         <button class="nav-room" data-room="repair"><span>🧰</span><div><strong>Repair Shop</strong><small>Mess up. Own it. Make it right.</small></div></button>
       </nav>
-
       <div class="safe-note">This is a safe place<br>to try, reflect,<br>and try again. ♡</div>
     </aside>
 
@@ -55,24 +53,23 @@
             <strong class="say-label">What do you say?</strong>
           </div>
 
-          <div class="character-stage">
-            <div class="office-doodles" aria-hidden="true"><span>✦</span><span>☕</span><span>✎</span><span>♡</span></div>
-            <div class="speech-bubble" id="characterBubble">I know what you're thinking.<br>Just hear me out, okay?</div>
-            <div class="character" id="character" aria-label="Cartoon avatar of Taylor">
-              <svg viewBox="0 0 260 320" role="img" aria-hidden="true">
-                <ellipse cx="130" cy="292" rx="92" ry="18" fill="#16373d" opacity=".18"/>
-                <path d="M65 285 Q70 190 130 178 Q190 190 195 285Z" fill="#0f5868" stroke="#102d36" stroke-width="7"/>
-                <path d="M88 204 Q130 232 172 204" fill="none" stroke="#8fd0d4" stroke-width="6"/>
-                <circle cx="130" cy="120" r="72" fill="#e6a36d" stroke="#102d36" stroke-width="7"/>
-                <path d="M60 110 Q58 39 118 38 Q138 5 181 28 Q220 48 198 112 Q176 81 155 76 Q105 89 60 110Z" fill="#4a2566" stroke="#102d36" stroke-width="7"/>
-                <path d="M91 109 Q108 98 121 110" fill="none" stroke="#102d36" stroke-width="6" stroke-linecap="round"/>
-                <path d="M142 110 Q159 98 173 110" fill="none" stroke="#102d36" stroke-width="6" stroke-linecap="round"/>
-                <circle cx="106" cy="128" r="6" fill="#102d36"/><circle cx="157" cy="128" r="6" fill="#102d36"/>
-                <path id="avatarMouth" d="M108 157 Q130 164 151 155" fill="none" stroke="#102d36" stroke-width="5" stroke-linecap="round"/>
-                <path d="M67 233 Q91 219 105 242" fill="none" stroke="#102d36" stroke-width="9" stroke-linecap="round"/>
-                <path d="M192 233 Q169 219 154 242" fill="none" stroke="#102d36" stroke-width="9" stroke-linecap="round"/>
-              </svg>
+          <div class="character-stage" id="sceneStage" data-mood="guarded">
+            <div class="scene-wall wall-one"></div>
+            <div class="scene-wall wall-two"></div>
+            <div class="wall-note note-one">LISTEN</div>
+            <div class="wall-note note-two">BE CURIOUS</div>
+            <div class="plant"><span></span><span></span><span></span></div>
+            <div class="table-scene">
+              <div class="chair chair-left"><i></i></div>
+              <div class="chair chair-right"><i></i></div>
+              <div class="table-top"></div>
+              <div class="mug mug-left">☕</div>
+              <div class="mug mug-right">☕</div>
+              <div class="notebook-prop">▤</div>
             </div>
+            <div class="speech-bubble" id="characterBubble">I know what you're thinking.<br>Just hear me out, okay?</div>
+            <div class="body-language-tag">BODY LANGUAGE: <strong id="bodyLanguageText">guarded</strong></div>
+            <div class="scene-caption" id="sceneCaption">Across the table, the room feels a little tight.</div>
           </div>
 
           <form class="reply-zone" id="replyForm">
@@ -87,15 +84,11 @@
             <button type="button" data-fill="This is impacting the team because...">This is impacting the team...</button>
             <button type="button" data-fill="I'm feeling frustrated because...">I'm feeling frustrated because...</button>
           </div>
-
           <div class="chat-log" id="chat" aria-live="polite"></div>
         </div>
 
         <aside class="impact-panel">
-          <div class="coach-note">
-            <span>LAB COACH ↝</span>
-            <p id="coachText">Stay connected <strong>and</strong> address the issue.</p>
-          </div>
+          <div class="coach-note"><span>LAB COACH ↝</span><p id="coachText">Stay connected <strong>and</strong> address the issue.</p></div>
           <h2>YOUR IMPACT ✨</h2>
           <div class="impact-row"><span>💜 Connection</span><div class="track"><i id="connectionMeter"></i></div><b id="connectionScore">72</b></div>
           <div class="impact-row"><span>🎯 Clarity</span><div class="track"><i id="clarityMeter"></i></div><b id="clarityScore">65</b></div>
@@ -119,7 +112,6 @@
       <footer class="footer-banner">Leadership isn't about being the smartest person in the room. It's about being the <strong>most human.</strong> ♡</footer>
     </main>
   </div>
-
   <dialog id="roomDialog" class="room-dialog"><button class="close-dialog" id="closeDialog" type="button">×</button><div id="roomDialogContent"></div></dialog>
   <dialog id="notebookDialog" class="room-dialog"><button class="close-dialog" id="closeNotebook" type="button">×</button><h2>My Notebook 📓</h2><div id="notebookEntries"></div></dialog>
   <script src="script.js"></script>
