@@ -3,113 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Leadership Lab: interactive role-play for practicing human-centered leadership conversations." />
-  <title>Leadership Lab</title>
+  <meta name="description" content="Leadership Lab: colorful interactive role-play for practicing human-centered leadership." />
+  <title>The Leadership Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Patrick+Hand&family=Schoolbell&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="logo" href="#top"><span class="lab-dot"></span> LEADERSHIP LAB</a>
-    <div class="top-actions">
-      <span class="microcopy">practice the human part</span>
-      <button id="restartTop" class="ghost-btn" type="button">↺ restart</button>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <span class="kicker">INTERACTIVE ROLE-PLAY</span>
-        <h1>Don’t read about leadership.<br><em>Try it.</em></h1>
-        <p>Step into a messy conversation. Say what you’d really say. The person in front of you reacts.</p>
-        <a class="start-btn" href="#simulator">Enter the room →</a>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="logo-wrap">
+        <div class="flask">⚗</div>
+        <div class="logo-copy"><span>THE</span><strong>LEADERSHIP</strong><b>LAB</b></div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="blob blob-a"></div>
-        <div class="blob blob-b"></div>
-        <div class="mini-person person-one"><span class="head"></span><span class="body"></span></div>
-        <div class="mini-person person-two"><span class="head"></span><span class="body"></span></div>
-        <div class="speech speech-a">Can I be honest?</div>
-        <div class="speech speech-b">…okay.</div>
-        <div class="scribble-arrow">↝</div>
-      </div>
-    </section>
+      <p class="tagline">PRACTICE THE HUMAN SIDE OF LEADERSHIP</p>
+      <div class="sticky-rule">People aren't experiments.<br><strong>Leadership is the practice.</strong></div>
 
-    <section class="scenario-picker" id="simulator">
-      <div class="picker-head">
-        <div><span class="kicker">CHOOSE A MOMENT</span><h2>What just walked into your office?</h2></div>
-        <p>No perfect-answer quiz. You’re practicing how you show up.</p>
-      </div>
-      <div class="scenario-cards" id="scenarioCards">
-        <button class="scenario-card active" type="button" data-scenario="late">
-          <span class="emoji">⏰</span><strong>They’re late. Again.</strong><small>Accountability + curiosity</small>
-        </button>
-        <button class="scenario-card" type="button" data-scenario="feedback">
-          <span class="emoji">💬</span><strong>“Nobody listens to me.”</strong><small>Feedback + belonging</small>
-        </button>
-        <button class="scenario-card" type="button" data-scenario="mistake">
-          <span class="emoji">🫠</span><strong>You handled it badly.</strong><small>Repair + ownership</small>
-        </button>
-      </div>
-    </section>
+      <p class="side-label">CHOOSE YOUR ROOM</p>
+      <nav class="room-nav" aria-label="Leadership practice rooms">
+        <button class="nav-room active" data-room="arena"><span>🥊</span><div><strong>The Arena</strong><small>Real situations. Real choices.</small></div></button>
+        <button class="nav-room" data-room="armor"><span>🛡️</span><div><strong>Armor Check</strong><small>Spot what blocks you.</small></div></button>
+        <button class="nav-room" data-room="rumble"><span>⚡</span><div><strong>The Rumble Room</strong><small>Hard conversations.</small></div></button>
+        <button class="nav-room" data-room="story"><span>🔎</span><div><strong>The Story Check</strong><small>Facts first. Stories last.</small></div></button>
+        <button class="nav-room" data-room="values"><span>⭐</span><div><strong>Values Lab</strong><small>What matters when it's messy.</small></div></button>
+        <button class="nav-room" data-room="repair"><span>🧰</span><div><strong>Repair Shop</strong><small>Mess up. Own it. Make it right.</small></div></button>
+      </nav>
 
-    <section class="simulator-wrap">
-      <div class="simulator-card">
-        <aside class="person-panel">
-          <div class="status-chip">LIVE PRACTICE</div>
-          <div class="portrait-wrap">
-            <div class="portrait" id="portrait"><div class="hair"></div><div class="face"><span class="eye left"></span><span class="eye right"></span><span class="mouth"></span></div><div class="shirt"></div></div>
-          </div>
-          <h3 id="personName">Jordan</h3>
-          <p id="personRole">Team member • usually dependable</p>
-          <div class="body-language">
-            <span>BODY LANGUAGE</span>
-            <strong id="bodyLanguage">Guarded</strong>
-          </div>
-          <div class="meters">
-            <div class="meter-row"><span>Connection</span><div class="meter"><i id="connectionMeter"></i></div></div>
-            <div class="meter-row"><span>Clarity</span><div class="meter"><i id="clarityMeter"></i></div></div>
-            <div class="meter-row"><span>Courage</span><div class="meter"><i id="courageMeter"></i></div></div>
-          </div>
-        </aside>
+      <div class="safe-note">This is a safe place<br>to try, reflect,<br>and try again. ♡</div>
+    </aside>
 
-        <section class="conversation-panel">
-          <div class="scene-header"><span id="sceneLabel">MONDAY • 8:18 AM</span><button id="newScenario" class="tiny-btn" type="button">switch scenario</button></div>
-          <div class="chat" id="chat" aria-live="polite"></div>
+    <main class="workspace">
+      <header class="workspace-top">
+        <div class="banner">People aren't experiments. <span>Leadership is the practice.</span></div>
+        <button class="notebook" type="button" id="notebookBtn">📓 MY NOTEBOOK <span id="notebookCount">0</span></button>
+      </header>
 
-          <div class="coach-card" id="coachCard">
-            <span class="coach-icon">✦</span>
-            <div><strong>Lab lens</strong><p id="coachText">Listen for the story your brain is writing before Jordan has told you theirs.</p></div>
+      <section class="scenario-strip" aria-label="Choose a scenario">
+        <button class="scenario-pill active" data-scenario="late">⏰ Late again</button>
+        <button class="scenario-pill" data-scenario="feedback">💬 Feeling unheard</button>
+        <button class="scenario-pill" data-scenario="mistake">🫠 You messed up</button>
+        <button class="scenario-pill random" id="randomScenario">🎲 Surprise me</button>
+      </section>
+
+      <section class="play-grid">
+        <div class="roleplay-card">
+          <div class="scene-copy">
+            <span class="arena-chip">YOU'RE IN THE ARENA ★</span>
+            <h1 id="sceneTitle">They're late.<br><em>AGAIN.</em></h1>
+            <p id="sceneSetup">Taylor is 25 minutes late to the team meeting again. You pull them aside.</p>
+            <strong class="say-label">What do you say?</strong>
           </div>
 
-          <form class="reply-box" id="replyForm">
-            <label for="replyInput">What do you say?</label>
-            <textarea id="replyInput" rows="3" placeholder="Type what you would actually say…"></textarea>
-            <div class="reply-actions">
-              <button class="send-btn" type="submit">Say it →</button>
-              <button class="suggest-btn" id="suggestBtn" type="button">Give me 3 ways</button>
+          <div class="character-stage">
+            <div class="office-doodles" aria-hidden="true"><span>✦</span><span>☕</span><span>✎</span><span>♡</span></div>
+            <div class="speech-bubble" id="characterBubble">I know what you're thinking.<br>Just hear me out, okay?</div>
+            <div class="character" id="character" aria-label="Cartoon avatar of Taylor">
+              <svg viewBox="0 0 260 320" role="img" aria-hidden="true">
+                <ellipse cx="130" cy="292" rx="92" ry="18" fill="#16373d" opacity=".18"/>
+                <path d="M65 285 Q70 190 130 178 Q190 190 195 285Z" fill="#0f5868" stroke="#102d36" stroke-width="7"/>
+                <path d="M88 204 Q130 232 172 204" fill="none" stroke="#8fd0d4" stroke-width="6"/>
+                <circle cx="130" cy="120" r="72" fill="#e6a36d" stroke="#102d36" stroke-width="7"/>
+                <path d="M60 110 Q58 39 118 38 Q138 5 181 28 Q220 48 198 112 Q176 81 155 76 Q105 89 60 110Z" fill="#4a2566" stroke="#102d36" stroke-width="7"/>
+                <path d="M91 109 Q108 98 121 110" fill="none" stroke="#102d36" stroke-width="6" stroke-linecap="round"/>
+                <path d="M142 110 Q159 98 173 110" fill="none" stroke="#102d36" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="106" cy="128" r="6" fill="#102d36"/><circle cx="157" cy="128" r="6" fill="#102d36"/>
+                <path id="avatarMouth" d="M108 157 Q130 164 151 155" fill="none" stroke="#102d36" stroke-width="5" stroke-linecap="round"/>
+                <path d="M67 233 Q91 219 105 242" fill="none" stroke="#102d36" stroke-width="9" stroke-linecap="round"/>
+                <path d="M192 233 Q169 219 154 242" fill="none" stroke="#102d36" stroke-width="9" stroke-linecap="round"/>
+              </svg>
             </div>
+          </div>
+
+          <form class="reply-zone" id="replyForm">
+            <textarea id="replyInput" rows="2" placeholder="Type what you would say to Taylor..."></textarea>
+            <button class="say-btn" type="submit">SAY IT ✈</button>
           </form>
-          <div class="suggestions" id="suggestions"></div>
-        </section>
-      </div>
-    </section>
 
-    <section class="debrief" id="debrief">
-      <div class="debrief-visual"><span>↺</span><strong>TRY AGAIN</strong></div>
-      <div><span class="kicker">THE LAB IS FOR REPS</span><h2>You don’t need the perfect sentence.</h2><p>Notice what your words made more possible: honesty, defensiveness, clarity, safety, accountability, repair. Then take another rep.</p></div>
-    </section>
-  </main>
+          <div class="nudges">
+            <span>Need a nudge? 💡</span>
+            <button type="button" data-fill="I notice...">I notice...</button>
+            <button type="button" data-fill="Can you help me understand...">Can you help me understand...</button>
+            <button type="button" data-fill="This is impacting the team because...">This is impacting the team...</button>
+            <button type="button" data-fill="I'm feeling frustrated because...">I'm feeling frustrated because...</button>
+          </div>
 
-  <footer>
-    <strong>Leadership Lab</strong>
-    <span>People aren’t experiments. Leadership is the practice.</span>
-    <small>Independent educational project. Not affiliated with Brené Brown or Dare to Lead.</small>
-  </footer>
+          <div class="chat-log" id="chat" aria-live="polite"></div>
+        </div>
 
+        <aside class="impact-panel">
+          <div class="coach-note">
+            <span>LAB COACH ↝</span>
+            <p id="coachText">Stay connected <strong>and</strong> address the issue.</p>
+          </div>
+          <h2>YOUR IMPACT ✨</h2>
+          <div class="impact-row"><span>💜 Connection</span><div class="track"><i id="connectionMeter"></i></div><b id="connectionScore">72</b></div>
+          <div class="impact-row"><span>🎯 Clarity</span><div class="track"><i id="clarityMeter"></i></div><b id="clarityScore">65</b></div>
+          <div class="impact-row"><span>⚡ Courage</span><div class="track"><i id="courageMeter"></i></div><b id="courageScore">48</b></div>
+          <div class="win-card"><span>TODAY'S WIN ⭐</span><p id="winText">You showed up. That's a win.</p></div>
+          <button class="save-insight" id="saveInsight" type="button">☆ SAVE THIS REP</button>
+        </aside>
+      </section>
+
+      <section class="practice-row">
+        <h2>MORE WAYS TO PRACTICE ↝</h2>
+        <div class="practice-cards">
+          <button class="practice-card teal" data-room="armor"><span>🛡️</span><strong>ARMOR CHECK</strong><small>What's your go-to when it gets hard?</small></button>
+          <button class="practice-card coral" data-room="rumble"><span>🥊</span><strong>THE RUMBLE ROOM</strong><small>Practice the tough conversations.</small></button>
+          <button class="practice-card gold" data-room="story"><span>🔎</span><strong>THE STORY CHECK</strong><small>Separate what happened from the story.</small></button>
+          <button class="practice-card green" data-room="values"><span>🧪</span><strong>VALUES LAB</strong><small>Live your values when it's messy.</small></button>
+          <button class="practice-card purple" data-room="repair"><span>🧰</span><strong>REPAIR SHOP</strong><small>Repair builds stronger relationships.</small></button>
+        </div>
+      </section>
+
+      <footer class="footer-banner">Leadership isn't about being the smartest person in the room. It's about being the <strong>most human.</strong> ♡</footer>
+    </main>
+  </div>
+
+  <dialog id="roomDialog" class="room-dialog"><button class="close-dialog" id="closeDialog" type="button">×</button><div id="roomDialogContent"></div></dialog>
+  <dialog id="notebookDialog" class="room-dialog"><button class="close-dialog" id="closeNotebook" type="button">×</button><h2>My Notebook 📓</h2><div id="notebookEntries"></div></dialog>
   <script src="script.js"></script>
 </body>
 </html>
