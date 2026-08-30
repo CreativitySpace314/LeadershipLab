@@ -7,142 +7,90 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260830n">
+  <link rel="stylesheet" href="styles.css?v=20260830p">
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <button class="brand" id="brandHome" type="button">
-        <span class="brand-orb">L•L</span>
-        <span><small>LEADERSHIP</small><strong>LAB</strong></span>
-      </button>
-      <p class="sidebar-copy">For new supervisors learning how to lead humans, not just manage tasks.</p>
-      <nav>
-        <button type="button" data-nav="home" class="nav-btn active"><span>01</span><b>Start here</b><small>Meet yourself under pressure</small></button>
-        <button type="button" data-nav="practice" class="nav-btn"><span>02</span><b>Conversation Lab</b><small>Try the words</small></button>
-        <button type="button" data-nav="moments" class="nav-btn"><span>03</span><b>Supervisor Moments</b><small>Choose the chaos</small></button>
-      </nav>
-      <div class="sidebar-note"><b>PEOPLE AREN'T EXPERIMENTS.</b><span>Leadership is the practice.</span></div>
-    </aside>
+<div class="app-shell">
+  <aside class="sidebar">
+    <button class="brand" id="brandHome" type="button"><span class="brand-orb">L•L</span><span><small>LEADERSHIP</small><strong>LAB</strong></span></button>
+    <p class="sidebar-copy">A playful practice space for new supervisors in human services.</p>
+    <nav>
+      <button type="button" data-nav="home" class="nav-btn active"><span>01</span><b>Start here</b><small>What this is + self-check</small></button>
+      <button type="button" data-nav="practice" class="nav-btn"><span>02</span><b>Conversation Lab</b><small>Try the words</small></button>
+      <button type="button" data-nav="moments" class="nav-btn"><span>03</span><b>Supervisor Moments</b><small>Practice real responsibility</small></button>
+    </nav>
+    <div class="sidebar-note"><b>PEOPLE AREN'T EXPERIMENTS.</b><span>Leadership is the practice.</span></div>
+  </aside>
 
-    <main>
-      <div class="emotion-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-      <header class="topbar">
-        <div><span class="eyebrow">LEADERSHIP LAB</span><h1 id="pageTitle">What gets loud in you?</h1><p id="pageSub">Pressure changes how we lead. Let's notice what shows up.</p></div>
-        <button class="outline-btn" id="restartBtn" type="button">Start over</button>
-      </header>
+  <main>
+    <div class="emotion-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <header class="topbar"><div><span class="eyebrow">LEADERSHIP LAB</span><h1 id="pageTitle">Welcome to the messy middle.</h1><p id="pageSub">New supervisors don't need another slideshow. They need somewhere to practice.</p></div><button class="outline-btn" id="restartBtn" type="button">Start over</button></header>
 
-      <section id="homeView" class="view">
-        <div class="hero-grid">
-          <section class="hero-copy">
-            <span class="pill yellow">NEW SUPERVISOR ENERGY</span>
-            <h2>You're responsible now.<br><em>What's happening inside you?</em></h2>
-            <p>Leadership gets interesting when somebody is upset, you're unsure, a mistake happens, or your authority gets challenged. This isn't a personality test. It's a mirror.</p>
-            <button class="primary-btn" id="startQuizBtn" type="button">Put me under pressure →</button>
-            <button class="link-btn" id="skipToPracticeBtn" type="button">Skip to a conversation</button>
-          </section>
-          <section class="inner-room" aria-label="Internal leadership voices">
-            <div class="voice voice-urgency"><small>URGENCY</small><b>Fix it. Now.</b></div>
-            <div class="voice voice-control"><small>CONTROL</small><b>Take over.</b></div>
-            <div class="voice voice-approval"><small>APPROVAL</small><b>Don't upset them.</b></div>
-            <div class="voice voice-curiosity"><small>CURIOSITY</small><b>Wait. Tell me more.</b></div>
-            <div class="voice voice-courage"><small>COURAGE</small><b>Say the hard thing.</b></div>
-            <div class="voice-core"><span>WHO GETS<br>THE MIC?</span></div>
-          </section>
+    <section id="homeView" class="view">
+      <section class="welcome-grid">
+        <div class="welcome-copy">
+          <span class="pill yellow">BUILT FOR NEW SUPERVISORS</span>
+          <h2>Leadership gets real<br><em>before you feel ready.</em></h2>
+          <p class="lead">The first write-up. A staff member crying. Someone challenging you in front of the team. A medication error. Real responsibility has a way of making something inside us get very loud.</p>
+          <p>Leadership Lab helps you notice that internal reaction, practice what you might actually say, and see how your response changes the room. No grades. No perfect scripts. No pretending supervisors always get it right.</p>
+          <div class="welcome-actions"><button class="primary-btn" id="startQuizBtn" type="button">Start with the 3-minute self-check →</button><button class="link-btn" id="skipToPracticeBtn" type="button">I want to try a conversation</button></div>
         </div>
-        <div class="hook-row">
-          <button type="button" data-jump="practice" data-scenario="late"><small>OHHH.</small><b>You're ready to write them up.</b><span>But you don't know the whole story →</span></button>
-          <button type="button" data-jump="practice" data-scenario="mistake"><small>PLOT TWIST.</small><b>The supervisor is the problem.</b><span>Now what? →</span></button>
-          <button type="button" data-jump="moments"><small>COMING NEXT.</small><b>A medication error happened.</b><span>Can you lead the response? →</span></button>
+        <div class="welcome-image"><img src="assets/leadership-inside.svg" alt="Colorful illustration of competing internal leadership reactions around a supervisor decision"></div>
+      </section>
+
+      <section class="how-it-works">
+        <div class="section-heading"><span class="eyebrow">SO... WHAT IS THIS?</span><h2>A place to look at yourself <em>before</em> you look at your staff.</h2></div>
+        <div class="step-grid">
+          <article class="step-card yellow-card"><span>1</span><h3>Notice what gets loud.</h3><p>Urgency? Control? Approval? Curiosity? Courage? The self-check shows the patterns behind your choices.</p></article>
+          <article class="step-card green-card"><span>2</span><h3>Try the actual words.</h3><p>Type what you would really say. The conversation shifts based on how you enter it.</p></article>
+          <article class="step-card pink-card"><span>3</span><h3>Flip the script.</h3><p>New information appears. Sometimes the staff member isn't the problem. Sometimes the supervisor is.</p></article>
         </div>
       </section>
 
-      <section id="quizView" class="view" hidden>
-        <div class="quiz-layout">
-          <section class="quiz-card">
-            <div class="quiz-meta"><span id="quizTag">PRESSURE</span><b id="quizCount">1 / 8</b></div>
-            <div class="progress"><i id="quizProgress"></i></div>
-            <h2 id="quizQuestion"></h2>
-            <p id="quizContext"></p>
-            <div id="quizAnswers" class="quiz-answers"></div>
-          </section>
-          <aside class="loud-panel">
-            <span class="eyebrow">WHAT'S GETTING LOUD?</span>
-            <p>Your choices shift these internal pulls. Not good or bad. Just information.</p>
-            <div class="loud-item orange"><div><b>Urgency</b><span id="liveUrgency">0</span></div><i><u id="barUrgency"></u></i></div>
-            <div class="loud-item purple"><div><b>Control</b><span id="liveControl">0</span></div><i><u id="barControl"></u></i></div>
-            <div class="loud-item pink"><div><b>Approval</b><span id="liveApproval">0</span></div><i><u id="barApproval"></u></i></div>
-            <div class="loud-item green"><div><b>Curiosity</b><span id="liveCuriosity">0</span></div><i><u id="barCuriosity"></u></i></div>
-            <div class="loud-item blue"><div><b>Courage</b><span id="liveCourage">0</span></div><i><u id="barCourage"></u></i></div>
-            <div class="loud-note">Answer like you on a tired Tuesday, not like you after a leadership conference.</div>
-          </aside>
-        </div>
+      <section class="foundation-strip">
+        <div><span class="eyebrow">THE FOUNDATION UNDERNEATH THE FUN</span><h2>What we're practicing</h2></div>
+        <div class="foundation-cards"><article><b>CURIOSITY</b><p>Get the story before the verdict.</p></article><article><b>COURAGE</b><p>Say the thing without becoming the thing.</p></article><article><b>VALUES</b><p>Know what matters when comfort and responsibility collide.</p></article><article><b>REPAIR</b><p>Leadership includes coming back after you miss.</p></article></div>
       </section>
 
-      <section id="resultsView" class="view" hidden>
-        <section class="results-hero">
-          <div><span class="pill yellow">THE LAB NOTICED SOMETHING</span><h2 id="resultHeadline"></h2><p id="resultSummary"></p></div>
-          <div class="loud-orbit" id="resultOrbit"></div>
-        </section>
-        <section class="evidence-card">
-          <div><span class="eyebrow">SHOW ME THE RECEIPTS</span><h3>How did the Lab get that?</h3><p>Every result comes from choices you actually made. Open the moments below.</p></div>
-          <div id="evidenceList" class="evidence-list"></div>
-        </section>
-        <section class="result-next">
-          <div><small>YOUR PRACTICE EDGE</small><h3 id="practiceEdgeTitle"></h3><p id="practiceEdgeText"></p></div>
-          <button class="primary-btn" id="practiceFromResult" type="button">Put me in a conversation →</button>
-        </section>
+      <section class="quiz-tease">
+        <div><span class="pill orange">FIRST STOP</span><h2>What gets loud in you when leadership gets uncomfortable?</h2><p>Eight short supervisor moments. The result is transparent: you can see exactly which choices shaped it.</p></div><button class="primary-btn" id="startQuizBtn2" type="button">Take the self-check →</button>
       </section>
 
-      <section id="practiceView" class="view" hidden>
-        <div class="scenario-tabs">
-          <button type="button" data-scenario="late">Late again</button>
-          <button type="button" data-scenario="feedback">Feeling unheard</button>
-          <button type="button" data-scenario="mistake">You messed up</button>
-        </div>
-        <div class="practice-layout">
-          <section class="conversation-card">
-            <div class="scene-head"><span class="pill purple" id="sceneLabel">REAL MOMENT</span><h2 id="sceneTitle"></h2><p id="sceneSetup"></p><div class="fact-row"><div><small>WHAT YOU KNOW</small><b id="knownFact"></b></div><div><small>WHAT YOU DON'T</small><b id="unknownFact"></b></div></div></div>
-            <div id="chat" class="chat" aria-live="polite"></div>
-            <div class="composer">
-              <label for="replyInput">What do you actually say?</label>
-              <div><textarea id="replyInput" rows="3" placeholder="Type like you would really talk..."></textarea><button id="sayBtn" type="button">Say it →</button></div>
-            </div>
-            <details class="nudges"><summary>Need a nudge? Give me a starting thread.</summary><div id="nudgeButtons"></div></details>
-          </section>
-          <aside class="coach-card">
-            <span class="eyebrow">WHAT JUST HAPPENED?</span>
-            <h3 id="coachHeadline">The room is listening.</h3>
-            <p id="coachText">Your words change what becomes easier or harder for the other person to say next.</p>
-            <div class="signal-stack"><div><span>Openness</span><b id="openScore">70</b></div><i><u id="openBar"></u></i></div>
-            <div class="signal-stack"><div><span>Clarity</span><b id="clarityScore">60</b></div><i><u id="clarityBar"></u></i></div>
-            <div class="signal-stack"><div><span>Trust</span><b id="trustScore">68</b></div><i><u id="trustBar"></u></i></div>
-            <div class="coach-interrupt" id="coachInterrupt"><small>INTERNAL CHECK</small><b>What are you protecting right now?</b></div>
-            <div class="micro-actions"><button type="button" id="rewindBtn">↶ Rewind my last line</button><button type="button" id="resetSceneBtn">Start this moment over</button></div>
-          </aside>
-        </div>
+      <section class="peek-grid">
+        <button type="button" data-jump="practice" data-scenario="late"><small>ACCOUNTABILITY</small><h3>You're ready to write them up.</h3><p>But you don't know the whole story yet.</p><span>Try the conversation →</span></button>
+        <button type="button" data-jump="practice" data-scenario="mistake"><small>PLOT TWIST</small><h3>The supervisor is the problem.</h3><p>You shut somebody down in front of everyone.</p><span>Practice the repair →</span></button>
+        <button type="button" data-jump="moments"><small>BUILDING NEXT</small><h3>“I think I gave the wrong medication.”</h3><p>Safety, policy, fear, accountability, and the leader in the room.</p><span>Preview it →</span></button>
       </section>
+    </section>
 
-      <section id="momentsView" class="view" hidden>
-        <div class="moments-intro"><span class="pill orange">SUPERVISOR MOMENTS</span><h2>Real responsibility. Human reactions.</h2><p>These are built to become full interactive coaching modules, not click-through trainings.</p></div>
-        <div class="moment-grid">
-          <button type="button" class="moment-card med" id="medMoment"><small>SAFETY + ACCOUNTABILITY</small><h3>“I think I gave the wrong medication.”</h3><p>Immediate safety. Reporting. Staff fear. Facts before blame. What gets loud in you?</p><span>Preview the module →</span></button>
-          <button type="button" class="moment-card" data-jump="practice" data-scenario="late"><small>CORRECTIVE ACTION</small><h3>You're ready to write them up.</h3><p>Before the form becomes the conversation.</p><span>Practice it →</span></button>
-          <button type="button" class="moment-card" data-jump="practice" data-scenario="feedback"><small>POWER + VOICE</small><h3>“Nobody listens to me here.”</h3><p>What if their frustration contains information?</p><span>Practice it →</span></button>
-          <button type="button" class="moment-card" data-jump="practice" data-scenario="mistake"><small>REPAIR</small><h3>You shut them down in front of everyone.</h3><p>Intent doesn't erase impact.</p><span>Practice it →</span></button>
-        </div>
-        <section id="medPreview" class="med-preview" hidden>
-          <button type="button" class="close-preview" id="closeMedPreview">×</button>
-          <span class="pill orange">MODULE PREVIEW</span>
-          <h2>7:42 PM. Your phone rings.</h2>
-          <div class="staff-call"><small>STAFF</small><p>“I think I gave Jordan the wrong medication.”</p></div>
-          <h3>Before policy. Before paperwork. What gets loud?</h3>
-          <div class="med-instincts"><button type="button">PANIC: Is the client okay?</button><button type="button">CONTROL: Who messed this up?</button><button type="button">COMPETENCE: I should know exactly what to do.</button><button type="button">COURAGE: Slow down. Safety first. Get the facts.</button></div>
-          <p class="med-footnote">This future module will pair your organization's actual medication-error procedure with interactive leadership coaching. The Lab will never replace policy, clinical direction, or required reporting.</p>
-        </section>
-      </section>
-    </main>
-  </div>
-  <script src="script.js?v=20260830n" defer></script>
+    <section id="quizView" class="view" hidden>
+      <div class="quiz-layout">
+        <section class="quiz-card"><div class="quiz-meta"><span id="quizTag">PRESSURE</span><b id="quizCount">1 / 8</b></div><div class="progress"><i id="quizProgress"></i></div><h2 id="quizQuestion"></h2><p id="quizContext"></p><div id="quizAnswers" class="quiz-answers"></div></section>
+        <aside class="loud-panel"><span class="eyebrow">WHAT'S GETTING LOUD?</span><p>These move as you answer. They are tendencies in this little exercise, not a diagnosis or a validated assessment.</p><div class="loud-item orange"><div><b>Urgency</b><span id="liveUrgency">50</span></div><i><u id="barUrgency"></u></i></div><div class="loud-item purple"><div><b>Control</b><span id="liveControl">50</span></div><i><u id="barControl"></u></i></div><div class="loud-item pink"><div><b>Approval</b><span id="liveApproval">50</span></div><i><u id="barApproval"></u></i></div><div class="loud-item green"><div><b>Curiosity</b><span id="liveCuriosity">50</span></div><i><u id="barCuriosity"></u></i></div><div class="loud-item blue"><div><b>Courage</b><span id="liveCourage">50</span></div><i><u id="barCourage"></u></i></div><div class="loud-note">Answer like you on a tired Tuesday. Not like you after a leadership conference.</div></aside>
+      </div>
+    </section>
+
+    <section id="resultsView" class="view" hidden>
+      <section class="results-hero"><div><span class="pill yellow">THE LAB NOTICED SOMETHING</span><h2 id="resultHeadline"></h2><p id="resultSummary"></p></div><div class="loud-orbit" id="resultOrbit"></div></section>
+      <section class="evidence-card"><div><span class="eyebrow">SHOW ME THE RECEIPTS</span><h3>How did the Lab get that?</h3><p>Every result comes from choices you actually made. Open any moment to see what shifted.</p></div><div id="evidenceList" class="evidence-list"></div></section>
+      <section class="result-next"><div><small>YOUR PRACTICE EDGE</small><h3 id="practiceEdgeTitle"></h3><p id="practiceEdgeText"></p></div><button class="primary-btn" id="practiceFromResult" type="button">Put me in a conversation →</button></section>
+    </section>
+
+    <section id="practiceView" class="view" hidden>
+      <div class="scenario-tabs"><button type="button" data-scenario="late">Late again</button><button type="button" data-scenario="feedback">Feeling unheard</button><button type="button" data-scenario="mistake">You messed up</button></div>
+      <div class="practice-layout">
+        <section class="conversation-card"><div class="scene-head"><span class="pill purple">REAL MOMENT</span><h2 id="sceneTitle"></h2><p id="sceneSetup"></p><div class="fact-row"><div><small>WHAT YOU KNOW</small><b id="knownFact"></b></div><div><small>WHAT YOU DON'T</small><b id="unknownFact"></b></div></div></div><div id="chat" class="chat" aria-live="polite"></div><div class="composer"><label for="replyInput">What do you actually say?</label><div><textarea id="replyInput" rows="3" placeholder="Type like you would really talk..."></textarea><button id="sayBtn" type="button">Say it →</button></div></div><details class="nudges"><summary>Need a nudge? Give me a starting thread.</summary><div id="nudgeButtons"></div></details></section>
+        <aside class="coach-card"><span class="eyebrow">WHAT JUST HAPPENED?</span><h3 id="coachHeadline">The room is listening.</h3><p id="coachText">Your words change what becomes easier or harder for the other person to say next.</p><div class="signal-stack"><div><span>Openness</span><b id="openScore">70</b></div><i><u id="openBar"></u></i></div><div class="signal-stack"><div><span>Clarity</span><b id="clarityScore">60</b></div><i><u id="clarityBar"></u></i></div><div class="signal-stack"><div><span>Trust</span><b id="trustScore">68</b></div><i><u id="trustBar"></u></i></div><div class="coach-interrupt" id="coachInterrupt"><small>INTERNAL CHECK</small><b>What are you protecting right now?</b></div><div class="micro-actions"><button type="button" id="rewindBtn">↶ Rewind my last line</button><button type="button" id="resetSceneBtn">Start this moment over</button></div></aside>
+      </div>
+    </section>
+
+    <section id="momentsView" class="view" hidden>
+      <div class="moments-intro"><span class="pill orange">SUPERVISOR MOMENTS</span><h2>Real responsibility. Human reactions.</h2><p>This is where Leadership Lab can grow into practical coaching modules for new supervisors.</p></div>
+      <div class="moment-grid"><button type="button" class="moment-card" id="medMoment"><small>SAFETY + ACCOUNTABILITY</small><h3>“I think I gave the wrong medication.”</h3><p>Immediate safety. Reporting. Staff fear. Facts before blame.</p><span>Preview the module →</span></button><button type="button" class="moment-card" data-jump="practice" data-scenario="late"><small>CORRECTIVE ACTION</small><h3>You're ready to write them up.</h3><p>Before the form becomes the conversation.</p><span>Practice it →</span></button><button type="button" class="moment-card" data-jump="practice" data-scenario="feedback"><small>POWER + VOICE</small><h3>“Nobody listens to me here.”</h3><p>What if their frustration contains information?</p><span>Practice it →</span></button><button type="button" class="moment-card" data-jump="practice" data-scenario="mistake"><small>REPAIR</small><h3>You shut them down in front of everyone.</h3><p>Intent doesn't erase impact.</p><span>Practice it →</span></button></div>
+      <section id="medPreview" class="med-preview" hidden><button type="button" class="close-preview" id="closeMedPreview">×</button><span class="pill orange">MODULE PREVIEW</span><h2>7:42 PM. Your phone rings.</h2><div class="staff-call"><small>STAFF</small><p>“I think I gave Jordan the wrong medication.”</p></div><h3>What gets loud first?</h3><div class="med-instincts"><button type="button">PANIC: Is the client okay?</button><button type="button">CONTROL: Who messed this up?</button><button type="button">COMPETENCE: I should know exactly what to do.</button><button type="button">COURAGE: Slow down. Safety first. Get the facts.</button></div><p class="med-footnote">A full module would pair the organization's actual medication-error procedure with leadership coaching. The Lab should never replace policy, clinical direction, or required reporting.</p></section>
+    </section>
+  </main>
+</div>
+<script src="script.js?v=20260830p" defer></script>
 </body>
 </html>
